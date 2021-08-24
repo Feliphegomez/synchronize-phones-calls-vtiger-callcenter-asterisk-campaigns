@@ -18,6 +18,7 @@
 						<label for="script" class="form-label">script</label>
 						<input type="text" class="form-control" name="script" id="script" value="<?= $campaign->script; ?>" readonly="" required="" />
 					</div>
+					
 					<div class="col-md-6">
 						<label for="datetime_init" class="form-label">Date Init</label>
 						<input type="date" class="form-control" name="datetime_init" id="datetime_init" value="<?= $campaign->datetime_init; ?>" required="" />
@@ -26,6 +27,7 @@
 						<label for="datetime_end" class="form-label">Date End</label>
 						<input type="date" class="form-control" name="datetime_end" id="datetime_end" value="<?= $campaign->datetime_end; ?>" required="" />
 					</div>
+					
 					<div class="col-md-6">
 						<label for="daytime_init" class="form-label">Hour Init</label>
 						<input type="time" class="form-control" name="daytime_init" id="daytime_init" value="<?= $campaign->daytime_init; ?>" required="" />
@@ -34,6 +36,7 @@
 						<label for="daytime_end" class="form-label">Hour End</label>
 						<input type="time" class="form-control" name="daytime_end" id="daytime_end" value="<?= $campaign->daytime_end; ?>" required="" />
 					</div>
+					
 					<div class="col-md-4">
 						<label for="id_url" class="form-label">id_url</label>
 						<select name="id_url" id="id_url" class="form-control" required="">
@@ -53,15 +56,16 @@
 						  <?php endforeach; ?>
 						</select>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<label for="context" class="form-label">context</label>
 						<input type="text" class="form-control" name="context" id="context" value="<?= $campaign->context; ?>" required="" />
 					</div>
-					<div class="col-md-3">
+					
+					<div class="col-md-4">
 						<label for="max_canales" class="form-label">max_canales</label>
 						<input type="number" class="form-control" id="max_canales" name="max_canales" min="0" value="<?= $campaign->max_canales; ?>" required="" />
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<label for="queue" class="form-label">queue</label>
 						<select name="queue" id="queue" class="form-control" required="">
 						  <option value="" selected>Choose...</option>
@@ -70,7 +74,7 @@
 						  <?php endforeach; ?>
 						</select>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<label for="retries" class="form-label">retries</label>
 						<input type="number" class="form-control" name="retries" id="retries" value="<?= $campaign->retries; ?>" min="1" required="" />
 					</div>

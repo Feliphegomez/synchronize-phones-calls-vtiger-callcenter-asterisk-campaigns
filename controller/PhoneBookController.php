@@ -16,6 +16,7 @@ class PhoneBookController extends ControladorBase{
 		){
 			$campaign = new Campaign(); // Creamos el objeto Campaign
 			$vcampaign = new vCampaign(); // Creamos el objeto Campaign
+			$campaign_v = new vCampaign(); // Creamos el objeto Campaign
 			$campaign->getById($_GET["campaign"]);
 			$phone_book = [];
 			$limit = 100;
@@ -39,7 +40,7 @@ class PhoneBookController extends ControladorBase{
 								$call->set('phone', $contact->homephone);
 								$call->save();
 								if($call->isValid()){
-									$call->insertAttr('VTIGER_CAMPAIGN_ID', $campaign->get('id'), 1);
+									$call->insertAttr('VTIGER_CAMPAIGN_ID', $_GET["vcampaign"], 1);
 									$call->insertAttr('VTIGER_MODULE', 'Contacts', 2);
 									$call->insertAttr('VTIGER_VIEW', 'Edit', 3);
 									$call->insertAttr('VTIGER_RECORD_ID', $contact->contactsubscriptionid, 4);
@@ -53,7 +54,7 @@ class PhoneBookController extends ControladorBase{
 								$call->set('phone', $contact->otherphone);
 								$call->save();
 								if($call->isValid()){
-									$call->insertAttr('VTIGER_CAMPAIGN_ID', $campaign->get('id'), 1);
+									$call->insertAttr('VTIGER_CAMPAIGN_ID', $_GET["vcampaign"], 1);
 									$call->insertAttr('VTIGER_MODULE', 'Contacts', 2);
 									$call->insertAttr('VTIGER_VIEW', 'Edit', 3);
 									$call->insertAttr('VTIGER_RECORD_ID', $contact->contactsubscriptionid, 4);
@@ -78,7 +79,7 @@ class PhoneBookController extends ControladorBase{
 								$call->set('phone', $lead->phone);
 								$call->save();
 								if($call->isValid()){
-									$call->insertAttr('VTIGER_CAMPAIGN_ID', $campaign->get('id'), 1);
+									$call->insertAttr('VTIGER_CAMPAIGN_ID', $_GET["vcampaign"], 1);
 									$call->insertAttr('VTIGER_MODULE', 'Leads', 2);
 									$call->insertAttr('VTIGER_VIEW', 'Edit', 3);
 									$call->insertAttr('VTIGER_RECORD_ID', $lead->leadaddressid, 4);
@@ -92,7 +93,7 @@ class PhoneBookController extends ControladorBase{
 								$call->set('phone', $lead->mobile);
 								$call->save();
 								if($call->isValid()){
-									$call->insertAttr('VTIGER_CAMPAIGN_ID', $campaign->get('id'), 1);
+									$call->insertAttr('VTIGER_CAMPAIGN_ID', $_GET["vcampaign"], 1);
 									$call->insertAttr('VTIGER_MODULE', 'Leads', 2);
 									$call->insertAttr('VTIGER_VIEW', 'Edit', 3);
 									$call->insertAttr('VTIGER_RECORD_ID', $lead->leadaddressid, 4);

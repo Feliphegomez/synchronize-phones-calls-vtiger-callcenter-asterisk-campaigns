@@ -78,11 +78,9 @@ class EntidadBase{
     
     public function getById($id){
         $query=$this->db->query("SELECT * FROM `{$this->table}` WHERE `id`={$id}");
-
-        if($row = $query->fetch_object()) {
-           $resultSet=$row;
-        }
-        
+		if($row = $query->fetch_object()) {
+			   $resultSet=$row;
+			}
         return $resultSet;
     }
     
