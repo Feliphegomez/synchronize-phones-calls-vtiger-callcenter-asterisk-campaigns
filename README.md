@@ -4,8 +4,7 @@ Synchronize phone book synchronize campaigns out asterisk callcenter to vtiger 7
 Sincronice los contactos y los prospectos de las campañas de vTiger 7 con su consola de CallCenter y maneje la libreta de telefonos de las campañas de salida de manera rapida y facil.
 
 #### Donate: 
-	0x0262A49C6C05fB3b85d7436B52B32d6B2e0EBdD4 (ETH)
-	In Brave Donate 
+	0x8dc25A4b4117915Ca6F79aa0e608F0192CD652AA (ETH-BAT-BNB)
 
 ### Config
 1. Copie el contenido del repositorio en la carpeta final, ejemplo: `/var/www/html/vtiger/callcenter`.
